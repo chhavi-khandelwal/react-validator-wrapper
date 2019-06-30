@@ -1,0 +1,15 @@
+.invalid {
+  border-color: red;
+}
+
+.invalid-msg {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+}
+
+.validator-wrapper {
+  position: relative;
+  display: inline-block;
+}
