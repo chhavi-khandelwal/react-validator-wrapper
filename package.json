@@ -1,6 +1,6 @@
 {
   "name": "react-validator-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Chhavi Khandelwal <chhavi.kh09@gmail.com>",
   "description": "React Form Validator - Developed out of React, it validates form inputs based on requirement",
   "main": "dist/validator.js",

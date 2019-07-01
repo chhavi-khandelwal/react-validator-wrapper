@@ -1,23 +1,43 @@
 React Validator Wrapper provides a validating wrapper and marks your form input as invalid, if it is required and has no value.
 
+**Installation**
 ```
-  npm install --save react-validator
+  npm install --save react-validator-wrapper
 ```
-**To Test**
- - yarn install
- - yarn build
- - Open http://localhost:7700/ for example
+
+### Props
+
+|   _Prop_    |               _Description_                 | _Default value_ |
+| :---------: | :-----------------------------------------: | :-------------: |
+| isRequired  | tells wrapper to validate input             |                 |
+| msg         | displayed when input is validated           | *It is required |
+
 
 **Example:**
 ```react
-/*
-  import Validator from 'validator';
-*/
+import Validator from 'validator';
 
-<Validator isRequired>
-  <label htmlFor="name">Type and Remove </label>
-  <input value={this.state.value} onChange={this.onChangeHandler.bind(this)} id="name"/>
-</Validator>
+class Input extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: "2"};
+  }
+
+  onChangeHandler = (e) => {
+    this.setState({value: e.target.value})
+  }
+
+  render() {
+    return (
+      <Validator isRequired msg="*required">
+        <label htmlFor="name">Type and Remove </label>
+        <input value={this.state.value} onChange={this.onChangeHandler.bind(this)} id="name"/>
+      </Validator>
+    )
+  }
+}
+
+ReactDOM.render(<Input/>, document.getElementById('root'));
 ```
 
 ## Style invalid messages
